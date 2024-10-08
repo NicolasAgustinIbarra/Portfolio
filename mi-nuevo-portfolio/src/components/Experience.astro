@@ -1,0 +1,29 @@
+---
+import type { ACTION_ERROR_CODES } from "astro:actions";
+import ExperienceIcon from "./Icons/ExperienceIcon.astro";
+
+
+const EXPERIENCE = [
+  {
+    date: "Marzo 2024 - Agosto 2024",
+    title: "Desarrollador Full Stack Vue Js/ .NET - ComercioCity",
+    description:
+      "Como desarrollador full stack en ComercioCity, me enfoqué en el desarrollo de soluciones personalizadas para nuestros clientes, combinando mis habilidades en desarrollo web con conocimientos en sistemas ERP. Mis principales tareas fueron: desarrollo de sitios web, reación de sitios web a medida, integrando funcionalidades con nuestro ERP para brindar una experiencia de usuario completa. Adaptación de ERP: Personalización de nuestro ERP para satisfacer las necesidades específicas de cada cliente, incluyendo desarrollos a medida y configuraciones. Soporte técnico: Resolución de incidencias técnicas y brindando asistencia a los clientes durante el ciclo de vida del proyecto.",
+    link: "https://www.comerciocity.com/inicio",
+  },
+];
+
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+  {EXPERIENCE.map((e) => (
+    <li class="mb-10 ms-4">
+      <ExperienceIcon
+        date={e.date}
+        title={e.title}
+        description={e.description}
+        link={e.link}
+      />
+    </li>
+  ))}
+</ol>

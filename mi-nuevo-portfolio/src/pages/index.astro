@@ -1,0 +1,135 @@
+---
+import Badge from "../components/Badge.astro";
+import Layout from "../layouts/Layout.astro";
+import GitHub from "../components/Icons/GitHub.astro";
+import LinkInd from "../components/Icons/LinkInd.astro";
+import Resume from "../components/Icons/Resume.astro";
+import MailIcon from "../components/Icons/MailIcon.astro";
+import Code from "../components/Icons/Code.astro";
+import Proyects from "../components/Proyects.astro";
+
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import MyStack from "../components/MyStack.astro";
+import Cursos from "../components/Cursos.astro";
+
+---
+
+<Layout
+    title="Nicolás Agustín Ibarra | Desarrollador Full Stack Vue Js/ React Js /.NET"
+>
+    <main id="inicio" class="px-4 md:px-8 lg:px-16 max-w-screen-xl mx-auto">
+        <SectionContainer
+            class="items-center justify-center flex flex-col mt-10"
+        >
+            <img
+                class="rounded-full w-32 h-32 md:w-40 md:h-40 mb-8 cursor-pointer"
+                src="../../public/perfil.jpeg"
+                alt="nico foto"
+            />
+            <h1
+                class="text-white text-3xl md:text-4xl lg:text-5xl font-bold text-center flex flex-col md:flex-row items-center gap-4 pb-6 lg:pb-10"
+            >
+                Hola, soy Nico 
+                <a
+                    href="https://www.linkedin.com/in/nicolas-agustin-ibarra-7a1192260/"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex justify-center items-center"
+                >
+                    <Badge>Disponible para trabajar</Badge>
+                </a>
+            </h1>
+            <h2 class="text-lg md:text-xl lg:text-2xl text-center max-w-[700px] text-pretty">
+                <span class="text-purple-500">Más de 2,5 años programando.</span>
+                Desarrollador Full Stack Vue Js/ React Js/ .NET.
+                <span class="text-purple-400">Estudiante avanzado de sistemas,</span>
+                <span class="opacity-80">en el Instituto Superior Tecnológico Empresarial Argentino.</span>
+                No dudes en contactarme por cualquiera de los medios dispuestos aquí debajo:
+            </h2>
+
+            <nav class="flex py-4 gap-4 flex-wrap justify-center mt-1">
+                <SocialPill
+                    href="https://www.linkedin.com/in/nicolas-agustin-ibarra-7a1192260/"
+                >
+                    <LinkInd class="size-4 md:size-6" />
+                    LinkInd
+                </SocialPill>
+                <SocialPill href="https://github.com/NicolasAgustinIbarra">
+                    <GitHub class="size-4 md:size-6" />
+                    GitHub
+                </SocialPill>
+                <SocialPill href="../../public/Desarrollador Full Stack__IBARRA, Nicolás Agustín.pdf">
+                    <Resume class="size-4 md:size-6" />
+                    Descargar CV
+                </SocialPill>
+                <SocialPill href="mailto:nicoibarra099@gmail.com">
+                    <MailIcon class="size-4 md:size-6" />
+                    Email
+                </SocialPill>
+            </nav>
+        </SectionContainer>
+
+        <SectionContainer id="experience">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">Experiencia Laboral:</h2>
+            <Experience />
+        </SectionContainer>
+
+        <SectionContainer id="projects">
+            <div class="flex gap-x-2 mb-6">
+                <Code />
+                <h2 class="text-2xl md:text-3xl font-semibold">
+                    Proyectos personales:
+                </h2>
+            </div>
+
+            <Proyects />
+        </SectionContainer>
+
+        <SectionContainer id="sobremi">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">Sobre mi:</h2>
+            <p class="text-base md:text-lg mb-4 text-pretty">
+                ¡Hola! Mi nombre es <span class="text-purple-400">Nicolás Agustín Ibarra</span>, un apasionado desarrollador de 25 años, con un
+                amor incondicional por la programación. Mi viaje en la
+                programación comenzó <span class="text-purple-600">hace más de dos años</span>, y desde entonces, no
+                he parado de aprender y mejorar mis habilidades.
+                Para fortalecer mis conocimientos, he
+                realizado  <span class="text-purple-600">muchísimos cursos</span> que me han ayudado a dominar
+                diferentes lenguajes y tecnologías. Pero no me conformo solo con
+                eso. Actualmente, estoy cursando una<span class="text-purple-600"> tecnicatura en
+                desarrollo de software</span>, y mi meta a futuro es culminar una licenciatura en
+                el área. Creo firmemente en la <span class="text-purple-400">educación continua</span> y en nunca
+                dejar de aprender. Una de las cosas que más disfruto es el
+                <span class="text-purple-400">trabajo en equipo</span>. Para mí, la colaboración es clave en el
+                desarrollo de software. Me encanta intercambiar ideas, aprender
+                de otros y aportar mi granito de arena en proyectos desafiantes.
+                Si hay algo que me caracteriza, es el <span class="text-purple-400">respeto</span>. Lo considero mi
+                máximo valor, tanto en lo personal como en lo profesional. Creo
+                que un ambiente de trabajo respetuoso es fundamental para el
+                crecimiento individual y colectivo.
+            </p>
+        </SectionContainer>
+
+        <SectionContainer id="stack">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6">Mi stack:</h2>
+            <MyStack />
+        </SectionContainer>
+
+        <SectionContainer id="educacion">
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 ">Mi educación:</h2>
+            <p class="mb-4 text-center">Te lo advierto, he realizado muchos curso ;)</p>
+            <Cursos/>
+        </SectionContainer>
+    </main>
+</Layout>
+
+<style>
+    img {
+        transition: 0.4s;
+    }
+    img:hover {
+        filter: drop-shadow(0 0 8rem rgb(168, 85, 247));
+        transition: 0.4s;
+    }
+</style>

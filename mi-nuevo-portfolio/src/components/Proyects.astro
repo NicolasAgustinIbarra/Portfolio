@@ -1,0 +1,139 @@
+---
+import CsharpIcon from "./Icons/CsharpIcon.astro";
+import NetIcon from "./Icons/NetIcon.astro";
+import SqlM from "./Icons/SqlM.astro";
+import js from "./Icons/JavaScript.astro";
+import VueIcon from "./Icons/VueIcon.astro";
+import ReactIcon from "./Icons/ReactIcon.astro";
+
+
+const TAGS = {
+    Csharp: {
+        name: "C#",
+        class: "text-white",
+        icon: CsharpIcon,
+    },
+    NET: {
+        name: ".NET",
+        class: "text-white",
+        icon: NetIcon,
+    },
+    WindowsForm: {
+        name: "Windows Forms",
+        class: " text-white",
+        icon: "",
+    },
+    SqlServer: {
+        name: "Microsoft SQL Server",
+        class: "text-white",
+        icon: SqlM,
+    },
+    Js: {
+        name: "JavaScript",
+        class: "text-white",
+        icon: js,
+    },
+    vue: {
+        name: "Vue Js",
+        class: "text-white",
+        icon: VueIcon,
+    },
+    react: {
+        name: "React Js",
+        class: "text-white",
+        icon: ReactIcon,
+    },
+};
+
+const PROJECTS = [
+{
+        title: "Tic Tac Toe con React Js",
+        description: "Este proyecto es un juego de Tic-Tac-Toe interactivo desarrollado con React. La aplicación permite a dos jugadores competir en tiempo real, alternando entre X y O hasta que uno gane o se declare un empate.",
+        link: "https://github.com/NicolasAgustinIbarra/Practicando-React/tree/master/02-tic-tac-toe",
+        github: "#",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQHga1PIZN23Iw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1728404884546?e=1731542400&v=beta&t=I5sAhJvv0DfaQLZb7MbIR2liXaT9C5MCGt_dzekoEZs",
+        tags: [TAGS.Js,TAGS.react],
+    },
+{
+        title: "ToDo List con Vue Js",
+        description: "Este proyecto es una aplicación de ToDo List desarrollada con Vue.js en el frontend y una Web API en .NET Core en el backend. Implementa un completo CRUD de tareas, que permite a los usuarios agregar, editar, eliminar y marcar tareas como completadas. Frontend en Vue.js para una experiencia de usuario dinámica y responsive. Backend en .NET Core con SQL Server como base de datos para almacenar de forma segura las tareas de los usuarios. Interacción con API para la gestión de tareas en tiempo real.",
+        link: "https://github.com/NicolasAgustinIbarra/ToDo_Con_Vue",
+        github: "#",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQFq2Fky-_rsvA/feedshare-shrink_800/feedshare-shrink_800/0/1728404112911?e=1731542400&v=beta&t=yiI_LRynLk446J9D0f-RszGOww_8tnTtWxZqOGmFCbo",
+        tags: [TAGS.Csharp, TAGS.NET, TAGS.Js,TAGS.vue,TAGS.SqlServer],
+    },
+{
+        title: "Ecommerce Evolution Fitness",
+        description: "Este proyecto es un ecommerce desarrollado utilizando la Arquitectura MVC en C#, implementando un diseño moderno y responsive con Bootstrap para asegurar una experiencia de usuario optimizada en dispositivos móviles y de escritorio. El sistema incluye las siguientes características clave: CRUD (Crear, Leer, Actualizar, Eliminar) completo para la gestión de productos, usuarios y pedidos. Interactividad con JavaScript para mejorar la experiencia del usuario, proporcionando una navegación fluida, interacción dinámica y validaciones instantáneas. Validaciones en el lado del servidor y del cliente para garantizar la integridad de los datos ingresados por los usuarios. Uso de HTML y CSS personalizados para mejorar la apariencia y la usabilidad de la aplicación. Conexión a una base de datos SQL para gestionar los productos, usuarios y transacciones del ecommerce.",
+        link: "https://github.com/NicolasAgustinIbarra/E-Commerce-con-MVC",
+        github: "#",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQGrEQFQGMPiFg/feedshare-shrink_800/feedshare-shrink_800/0/1728403914920?e=1731542400&v=beta&t=Btapty2ib9McGcmzcU--u647pQw3pMZ13qOGDTEhVJM",
+        tags: [TAGS.Csharp, TAGS.NET, TAGS.Js,TAGS.SqlServer],
+    },
+    {
+        title: "Gestor de catálogo APP",
+        description: "Este proyecto es una aplicación de escritorio diseñada para gestionar de forma eficiente un catálogo de productos o elementos. Desarrollada en C# utilizando el framework .NET y la interfaz visual de Windows Forms, ofrece una interfaz intuitiva para realizar las operaciones CRUD (Create, Read, Update, Delete) sobre una base de datos SQL Server.",
+        link: "https://github.com/NicolasAgustinIbarra/Gestor-de-Catalogo-App",
+        github: "#",
+        image: "https://media.licdn.com/dms/image/v2/D4D22AQGJaiaVeFk8PQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1683589208818?e=1730937600&v=beta&t=CfeRvH7HkwZjQ621AR6iHzt361iWbG69abk-Z7XRAzc",
+        tags: [TAGS.Csharp, TAGS.NET, TAGS.WindowsForm,TAGS.SqlServer],
+    },
+    
+];
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags, link }) => (
+        <article class="mt-4">
+            <h3 class="text-2xl font-semibold text-purple-700 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <h4 class="text-2xl font-semibold text-purple-500 mb-2">Stack:</h4>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span
+                            class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2 mb-2 text-center items-center `}
+                        >
+                            {tag.icon ? (
+                                <tag.icon class="size-7" />
+                            ) : (
+                                <span class="h-8" />
+                            )}
+                            {tag.name}
+                        </span>
+                    </li>
+                ))}
+            </ul>
+
+            <img
+                class="mb-2 rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${title}`}
+            />
+
+            <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-purple-800 rounded-lg hover:bg-purple-900 focus:ring-4 focus:outline-none focus:ring-putple-300 dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800"
+            >
+                Visitar
+                <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"
+                    />
+                </svg>
+            </a>
+        </article>
+    ))
+}

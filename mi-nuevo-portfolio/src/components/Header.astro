@@ -1,0 +1,29 @@
+---
+const menuItems = [
+  { href: "#inicio", label: "Inicio" },
+  { href: "#sobremi", label: "Sobre mi" },
+  { href: "#experience", label: "Experiencia" },
+  { href: "#projects", label: "Proyectos" },
+  { href: "https://www.linkedin.com/in/nicolas-agustin-ibarra-7a1192260/", label: "Contacto" }
+];
+---
+
+<header class="fixed top-0 left-0 w-full z-50 bg-opacity-80 backdrop-blur-sm transition-all duration-300 ease-in-out py-4">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="flex justify-center items-center">
+      <ul class="flex flex-wrap justify-center space-x-1 sm:space-x-4">
+        {menuItems.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="text-white opacity-80 hover:opacity-100 px-3 py-2 text-sm sm:text-base font-medium rounded-md transition-all duration-300 ease-in-out hover:bg-purple-900 hover:bg-opacity-50 relative group"
+            >
+              {item.label}
+              <span class="absolute bottom-0 left-0 w-full h-0.5 bg-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out"></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

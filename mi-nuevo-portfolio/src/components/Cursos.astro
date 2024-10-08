@@ -1,0 +1,166 @@
+---
+const CURSOS = {
+    linq:{
+        name: 'Entity Framework y LINQ',
+        img: "../../public/certificados/Certificado-Entity-Framework-y-LINQ-EducaciónIT.jpeg",
+        area:'back',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/72727'
+    },
+    html:{
+        name: 'Desarrollo Web con HTML',
+        img: "../../public/certificados/Certificado-Desarrollo-Web-con-HTML-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/68983'
+    },
+    git:{
+        name: ' Git: Desarrollo Colaborativo',
+        img: "../../public/certificados/Certificado-Git_-Desarrollo-Colaborativo-EducaciónIT_00001.webp",
+        area:'otros',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/73365'
+    },
+    android:{
+        name: 'Introducción a Android',
+        img: "../../public/certificados/Certificado-Introducción-a-Android-EducaciónIT_00001.webp",
+        area:'back',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/70336'
+    },
+    programacion:{
+        name: 'Introducción a la Programación',
+        img: "../../public/certificados/Certificado-Introducción-a-la-Programación-EducaciónIT_00001 (1).webp",
+        area:'otros',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/54677'
+    },
+    poo:{
+        name: 'Introducción al Paradigma de Objetos',
+        img: "../../public/certificados/Certificado-Introducción-al-Paradigma-de-Objetos-EducaciónIT_00001.webp",
+        area:'back',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/68800'
+    },
+    ux:{
+        name: 'Introducción a UX',
+        img: "../../public/certificados/Certificado-Introducción-a-UX-EducaciónIT_00001.webp",
+        area:'otros',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/68880'
+    },
+    awp:{
+        name: 'Javascript AWP',
+        img: "../../public/certificados/Certificado-Javascript-AWP-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/71407'
+    },
+    jsAvanzado:{
+        name: 'Javascript Desarrollador Avanzado',
+        img: "../../public/certificados/Certificado-Javascript-Desarrollador-Avanzado-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/71399'
+    },
+    js0:{
+        name: 'Javascript desde cero',
+        img: "../../public/certificados/Certificado-Javascript-desde-cero-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/68745'
+    },
+    maquetador:{
+        name: 'Maquetador Web Avanzado',
+        img: "../../public/certificados/Certificado-Maquetador-Web-Avanzado-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/71533'
+    },
+    scrum:{
+        name: 'Scrum Fundamentos',
+        img: "../../public/certificados/Certificado-Scrum-Fundamentos-EducaciónIT_00001.webp",
+        area:'otros',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/73393'
+    },
+    responsive:{
+        name: 'Responsive Web & Bootstrap',
+        img: "../../public/certificados/Certificado-Responsive-Web-&-Bootstrap-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/70441'
+    },
+    ui:{
+        name: 'UI: Interfaz de Usuario',
+        img: "../../public/certificados/Certificado-UI_-Interfaz-de-Usuario-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/72382'
+    },
+    netcore:{
+        name: 'Web API .Net Core',
+        img: "../../public/certificados/Certificado-Web-API-.Net-Core-EducaciónIT_00001.webp",
+        area:'back',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/71347'
+    },
+    react:{
+        name: 'React.JS Developer',
+        img: "../../public/certificados/Certificado-React.JS-Developer-EducaciónIT_00001.webp",
+        area:'front',
+        link:'https://www.educacionit.com/perfil/nicolas-agustin-ibarra-918954/certificado/71418'
+    },
+    C1:{
+        name: 'C# Nivel 1',
+        img: "../../public/certificados/C1.webp",
+        area:'back',
+        link:''
+    },
+    C2:{
+        name: 'C# Nivel 2',
+        img: "../../public/certificados/C2.webp",
+        area:'back',
+        link:''
+    },
+    C3:{
+        name: 'C# Nivel 3',
+        img: "../../public/certificados/C3.webp",
+        area:'back',
+        link:''
+    },
+    
+}
+
+const areas = ['Todas', 'Front End', 'Back End', 'Otros'];
+---
+<!-- <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
+    <button type="button" class="text-purple-700 hover:text-white border border-purple-600  hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-purple-500 dark:text-purple-500 dark:hover:text-white dark:hover:bg-purple-500 dark:bg-gray-900 dark:focus:ring-purple-800">Todas</button>
+    <button type="button" class="text-purple-900 border border-purple-600 hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Front End</button>
+    <button type="button" class="text-purple-900 border border-purple-600 hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Back End</button>
+    <button type="button" class="text-purple-900 border border-purple-600 hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Otros</button>
+</div> -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-h-[700px] overflow-y-auto custom-scrollbar">
+    {Object.entries(CURSOS).map(([key, c]) => (
+        <div class="flex flex-col items-center cursor-pointer">
+            <a href={c.link} rel="noopener noreferrer" target="_blank">
+                <img class="h-auto max-w-full rounded-lg" src={c.img} alt=""></img>
+                <h2 class="text-center mt-3 text-sm font-medium ">{c.name}</h2>
+            </a>
+        </div>
+    ))}
+</div>
+
+<style>
+    .custom-scrollbar {
+        scrollbar-width:auto;
+        scrollbar-color: rgb(99, 15, 160) black;
+        padding: 2px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        width: 8px;
+        
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #F3F4F6;
+        border-radius: 4px;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgb(157, 51, 234);
+        border-radius: 4px;
+        border: 2px solid #F3F4F6;
+        
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background-color: rgb(157, 51, 234);
+    }
+</style>
