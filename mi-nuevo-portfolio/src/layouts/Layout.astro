@@ -14,12 +14,45 @@ const { title } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta
+			name="description"
+			content="Más de 3 años programando. Desarrollador Full Stack Vue Js/ React Js/ .NET. Estudiante avanzado de sistemas, en el Instituto Superior Tecnológico Empresarial Argentino."
+		/>
+
+		<link rel="icon" type="image/svg+xml" href="/favi.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<!-- Open Graph -->
+		<meta property="og:title" content="Mi portfolio - Nicolás Ibarra" />
+		<meta
+			property="og:description"
+			content="Soy Nicolás, desarrollador junior especializado en Vue.js. ¡Conocé mis proyectos!"
+		/>
+		<meta
+			property="og:image"
+			content="https://nicolas-agustin-ibarra.vercel.app/img/perfil.jpeg"
+		/>
+		<meta
+			property="og:url"
+			content="https://nicolas-agustin-ibarra.vercel.app/"
+		/>
+		<meta property="og:type" content="website" />
+
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="Mi portfolio - Nicolás Ibarra" />
+		<meta
+			name="twitter:description"
+			content="Soy Nicolás, desarrollador junior especializado en Vue.js. ¡Conocé mis proyectos!"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://nicolas-agustin-ibarra.vercel.app/img/perfil.jpeg"
+		/>
 	</head>
+
 	<body>
 		<!-- <div
 			class="absolute inset-0 -z-10 h-full lg:w-full w-[540px] 
@@ -45,11 +78,10 @@ const { title } = Astro.props;
 		flex-direction: column;
 		min-height: 100vh;
 		background: #000;
-		
 	}
 
-	@media(prefers-reduced-motion: reduce){
-		html{
+	@media (prefers-reduced-motion: reduce) {
+		html {
 			scroll-behavior: auto;
 		}
 	}
